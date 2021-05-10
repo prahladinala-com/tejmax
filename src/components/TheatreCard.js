@@ -1,0 +1,24 @@
+import React from "react";
+import poster from "../img/poster.png";
+const TheatreCard = ({
+  title = "Theatre Name",
+  value = 1,
+  btntext = "Book a Tickets",
+  btnicon = "fas fa-shopping-cart",
+  url = "/user/carttheatreholder/",
+}) => {
+  return (
+    <div className="col-lg-3 col-6">
+      <div className="card mt-2">
+        <img src={poster} className="card-img-top" alt="..." />
+        <div className="card-body">
+          <h4 className="card-title">{title}</h4>
+          <a href={url + value} className="btn btn-primary btn-block">
+            <i className={btnicon}></i> &nbsp; {btntext}
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default TheatreCard;
